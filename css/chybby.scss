@@ -235,7 +235,7 @@ body {
 }
 
 .portfolio .project-screenshot {
-    background-image: url('../images/portfolio_screenshot_2x.png');
+    background-image: image-set(url('../images/portfolio_screenshot_2x.png') 2x, url('../images/portfolio_screenshot_1x.png') 1x);
 }
 
 footer {
