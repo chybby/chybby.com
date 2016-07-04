@@ -146,6 +146,7 @@ body {
         height: 55%;
         border-bottom: 1px solid $project-screenshot-border-color;
         background-size: cover;
+        background-position-x: center;
         transition: height 1s, border-bottom 0.5s;
     }
 
