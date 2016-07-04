@@ -1,0 +1,18 @@
+{
+  "name": "chybby.com",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chybby/chybby.com.git"
+  },
+  "author": "Adam Chyb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chybby/chybby.com/issues"
+  },
+  "homepage": "https://chybby.com",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
