@@ -4,6 +4,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
 var cssnano = require('gulp-cssnano');
 var notify = require('gulp-notify');
+var del = require('del');
 
 gulp.task('default', ['clean'], function() {
     gulp.start('css');
