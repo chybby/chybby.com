@@ -1,4 +1,8 @@
 .sass-cache/
 node_modules/
 static/css/
+static/js
 rev-manifest.json
+venv/
+config.py
+__pycache__/
