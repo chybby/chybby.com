@@ -144,9 +144,10 @@ body {
     .project-screenshot {
         width: 100%;
         height: 55%;
+        vertical-align: top;
         border-bottom: 1px solid $project-screenshot-border-color;
-        background-size: cover;
-        background-position-x: center;
+        object-fit: cover;
+        object-position: 50% 0;
         transition: height 1s, border-bottom 0.5s;
     }
 
@@ -229,14 +230,6 @@ body {
     .project-links {
         height: 25%;
     }
-}
-
-.tutorifull .project-screenshot {
-    background-image: image-set(url('../images/tutorifull_screenshot_2x.png') 2x, url('../images/tutorifull_screenshot_1x.png') 1x);
-}
-
-.portfolio .project-screenshot {
-    background-image: image-set(url('../images/portfolio_screenshot_2x.png') 2x, url('../images/portfolio_screenshot_1x.png') 1x);
 }
 
 footer {
