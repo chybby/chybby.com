@@ -7,3 +7,4 @@ rev-manifest.json
 venv/
 config.py
 __pycache__/
+.vscode/
