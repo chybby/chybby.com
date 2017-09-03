@@ -2,6 +2,7 @@
 
 from __future__ import absolute_import, print_function
 
+import json
 import os
 
 import flask_assetrev
@@ -29,7 +30,9 @@ def homepage():
         response.cache_control.no_store = True
         return response
 
-    return render_template('homepage.html')
+    projects = json.load(open('projects.json'))
+
+    return render_template('homepage.html', projects=projects)
 
 
 @app.route('/favicon.ico')

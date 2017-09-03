@@ -15,7 +15,6 @@
     <meta name="apple-mobile-web-app-title" content="Chybby">
     <meta name="application-name" content="Chybby">
     <meta name="msapplication-config" content="{{ url_for('static', filename='favicon/browserconfig.xml') }}">
-    <meta name="theme-color" content="#38a370">
     <title>Adam Chyb</title>
 </head>
 
@@ -32,41 +31,49 @@
     </script>
     <div class="main-content">
         <header class="profile">
-            <img src="static/images/profile_2x.jpg" srcset="static/images/profile_1x.jpg 1x" alt="My beautiful face">
+            <img src="static/images/profile_2x.png" srcset="static/images/profile_1x.png 1x" alt="My beautiful face">
             <div class="profile-info">
                 <h1>Adam Chyb</h1>
-                <h2>Computer Scientist, Developer</h2>
-                <div class="row justify-centered wrap-wrap">
+                <h2>Software Developer, Part-Time Avatar</h2>
+                <div class="profile-links row wrap-wrap">
                     <a class="email-link" href="mailto:achybby@gmail.com">achybby@gmail.com</a>
                     <a class="github-link" href="https://github.com/Chybby">GitHub</a>
                     <a class="linkedin-link" href="https://www.linkedin.com/in/achyb">LinkedIn</a>
                 </div>
             </div>
         </header>
-        <div class="row justify-space-around wrap-wrap">
-            <div class="project-box">
-                <img class="project-screenshot" src="static/images/tutorifull_screenshot_2x.png" srcset="static/images/tutorifull_screenshot_1x.png 1x" alt="Screenshot of Tutorifull">
-                <img class="project-icon" src="static/images/tutorifull_icon.svg" alt="Tutorifull icon">
-                <div class="project-desc">
-                    <h3>Tutorifull</h3>
-                    <p>Get an alert when a UNSW class has a free spot.</p>
-                </div>
-                <div class="row justify-centered project-links">
-                    <a href="https://tutorifull.chybby.com">Visit</a>
-                    <a href="https://github.com/Chybby/Tutorifull">Source</a>
-                </div>
+        <div class="about-me column justify-centered">
+            <h3>Who Is This Guy?</h3>
+            <div>
+                <p>
+                    Madam, I'm Adam. I'm a computer science graduate from UNSW with an interest in using computers for making things and breaking things.
+                    When I'm not in front of my computer I also like playing my ukulele, cosplay and gaming (OK, that last one is still in front of a computer).
+                </p>
+                <p>
+                    One day I would love to make a video game, either solo or with a team.
+                </p>
+                <p>
+                    My favourite Pokemon is Cyndaquil.
+                </p>
             </div>
-            <div class="project-box">
-                <img class="project-screenshot" src="static/images/portfolio_screenshot_2x.png" srcset="static/images/portfolio_screenshot_1x.png 1x" alt="Screenshot of portfolio">
-                <img class="project-icon" src="static/images/portfolio_icon_2x.jpg" srcset="static/images/portfolio_icon_1x.jpg 1x" alt="Portfolio icon">
-                <div class="project-desc">
-                    <h3>My Portfolio</h3>
-                    <p>The website you're looking at :)</p>
+        </div>
+        <div class="projects column justify-centered">
+            <h3>I Made These</h3>
+            <div class="row justify-space-around wrap-wrap">
+                {% for project in projects %}
+                <div class="project-box">
+                    <img class="project-screenshot" src="static/images/{{ project.id }}_screenshot_2x.png" srcset="static/images/{{ project.id }}_screenshot_1x.png 1x" alt="Screenshot of {{ project.name }}">
+                    <img class="project-icon" src="static/images/{{ project.id }}_icon_2x.png" srcset="static/images/{{ project.id }}_icon_1x.png 1x" alt="{{ project.name }} icon">
+                    <div class="project-desc">
+                        <h3>{{ project.name }}</h3>
+                        <p>{{ project.desc }}</p>
+                    </div>
+                    <div class="row justify-centered project-links">
+                        <a href="{{ project.url }}">Visit</a>
+                        <a href="{{ project.source }}">Source</a>
+                    </div>
                 </div>
-                <div class="row justify-centered project-links">
-                    <a href="https://chybby.com">Visit</a>
-                    <a href="https://github.com/Chybby/chybby.com">Source</a>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

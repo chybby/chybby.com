@@ -86,6 +86,11 @@ body {
             font-size: 2.5em;
             font-weight: bold;
             margin-bottom: 5px;
+            text-align: center;
+
+            @media only screen and (min-width: $breakpoint-small) {
+                text-align: left;
+            }
         }
 
         h2 {
@@ -93,6 +98,18 @@ body {
             font-style: italic;
             margin-bottom: 5px;
             text-align: center;
+
+            @media only screen and (min-width: $breakpoint-small) {
+                text-align: left;
+            }
+        }
+
+        .profile-links {
+            justify-content: center;
+
+            @media only screen and (min-width: $breakpoint-small) {
+                justify-content: flex-start;
+            }
         }
 
         a {
@@ -131,104 +148,139 @@ body {
     }
 }
 
-.project-box {
-    width: 300px;
-    height: 350px;
-    margin: 20px;
-    position: relative;
-    border: 1px solid $box-border-color;
-    border-radius: 5px;
-    background-color: $project-box-background-color;
-    overflow: hidden;
+h3 {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 60px 0 15px 0;
+}
 
-    .project-screenshot {
-        width: 100%;
-        height: 55%;
-        vertical-align: top;
-        border-bottom: 1px solid $project-screenshot-border-color;
-        object-fit: cover;
-        object-position: 50% 0;
-        transition: height 1s, border-bottom 0.5s;
+br::before {
+    width: 30px;
+    height: 1px;
+    border: 1px solid black;
+}
+
+.about-me {
+    div {
+        border: 1px solid $box-border-color;
+        border-radius: 5px;
+        background-color: $project-box-background-color;
+        padding: 20px;
+        margin: 0 40px 0 40px;
     }
 
-    .project-icon {
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        left: calc(50% - 50px);
-        top: calc(55% - 70px);
-        border: $circular-image-border;
-        border-radius: 100%;
-        box-shadow: $circular-image-shadow;
-        transition: top 1s, box-shadow 1.5s;
+    p {
+        margin-bottom: 1em;
     }
 
-    .project-desc {
-        width: 100%;
-        height: 45%;
-        padding: 30px 20px 0 20px;
-        transition: padding-top 1s, height 1s;
-
-        h3 {
-            font-size: 2em;
-            font-weight: bold;
-            margin: 10px 0 10px 0;
-            text-align: center;
-        }
-
-        p {
-            text-align: center;
-        }
-    }
-
-    .project-links {
-        width: 100%;
-        padding-top: 10px;
-        height: 0;
-        transition: height 1s;
-
-        a {
-            display: block;
-            width: 30%;
-            height: 39px;
-            padding: 10px;
-            margin-right: 20px;
-            text-align: center;
-            text-decoration: none;
-            color: $project-button-font-color;
-            background-color: $project-button-background-color;
-            border: 1px solid $box-border-color;
-            border-radius: 5px;
-        }
-
-        a:last-of-type {
-            margin-right: 0;
-        }
-
-        a:hover {
-            background-color: $project-button-background-color-highlighted;
-        }
+    p:last-of-type {
+        margin: 0;
     }
 }
 
-.project-box:hover {
-    .project-icon {
-        top: 20px;
-        box-shadow: 0 0 1px 1px $circular-image-shadow-color;
+.projects {
+
+    margin-top: 20px;
+
+    .project-box {
+        width: 300px;
+        height: 350px;
+        margin: 20px;
+        position: relative;
+        border: 1px solid $box-border-color;
+        border-radius: 5px;
+        background-color: $project-box-background-color;
+        overflow: hidden;
+
+        .project-screenshot {
+            width: 100%;
+            height: 55%;
+            vertical-align: top;
+            border-bottom: 1px solid $project-screenshot-border-color;
+            object-fit: cover;
+            object-position: 50% 0;
+            transition: height 1s, border-bottom 0.5s;
+        }
+
+        .project-icon {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: calc(50% - 50px);
+            top: calc(55% - 70px);
+            border: $circular-image-border;
+            border-radius: 100%;
+            box-shadow: $circular-image-shadow;
+            transition: top 1s, box-shadow 1.5s;
+        }
+
+        .project-desc {
+            width: 100%;
+            height: 45%;
+            padding: 30px 20px 0 20px;
+            transition: padding-top 1s, height 1s;
+
+            h3 {
+                font-size: 2em;
+                font-weight: bold;
+                margin: 10px 0 10px 0;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+
+        .project-links {
+            width: 100%;
+            padding-top: 10px;
+            height: 0;
+            transition: height 1s;
+
+            a {
+                display: block;
+                width: 30%;
+                height: 39px;
+                padding: 10px;
+                margin-right: 20px;
+                text-align: center;
+                text-decoration: none;
+                color: $project-button-font-color;
+                background-color: $project-button-background-color;
+                border: 1px solid $box-border-color;
+                border-radius: 5px;
+            }
+
+            a:last-of-type {
+                margin-right: 0;
+            }
+
+            a:hover {
+                background-color: $project-button-background-color-highlighted;
+            }
+        }
     }
 
-    .project-screenshot {
-        height: 0;
-        border-bottom: 0 solid $project-screenshot-border-color;
-    }
+    .project-box:hover {
+        .project-icon {
+            top: 20px;
+            box-shadow: 0 0 1px 1px $circular-image-shadow-color;
+        }
 
-    .project-desc {
-        padding-top: 130px;
-        height: 75%;
-    }
+        .project-screenshot {
+            height: 0;
+            border-bottom: 0 solid $project-screenshot-border-color;
+        }
 
-    .project-links {
-        height: 25%;
+        .project-desc {
+            padding-top: 130px;
+            height: 75%;
+        }
+
+        .project-links {
+            height: 25%;
+        }
     }
 }
 
