@@ -15,6 +15,7 @@
     <meta name="apple-mobile-web-app-title" content="Chybby">
     <meta name="application-name" content="Chybby">
     <meta name="msapplication-config" content="{{ url_for('static', filename='favicon/browserconfig.xml') }}">
+    <meta name="theme-color" content="#9dd4f1">
     <title>Adam Chyb</title>
 </head>
 
@@ -42,7 +43,7 @@
                 </div>
             </div>
         </header>
-        <div class="about-me column justify-centered">
+        <div class="about-me column">
             <h3>Who Is This Guy?</h3>
             <div>
                 <p>
@@ -53,19 +54,19 @@
                     One day I would love to make a video game, either solo or with a team.
                 </p>
                 <p>
-                    My favourite Pokemon is Cyndaquil.
+                    My favourite Pokemon is Cyndaquil 🔥.
                 </p>
             </div>
         </div>
-        <div class="projects column justify-centered">
-            <h3>I Made These</h3>
+        <div class="projects column">
+            <h3>I Made These Things</h3>
             <div class="row justify-space-around wrap-wrap">
                 {% for project in projects %}
                 <div class="project-box">
                     <img class="project-screenshot" src="static/images/{{ project.id }}_screenshot_2x.png" srcset="static/images/{{ project.id }}_screenshot_1x.png 1x" alt="Screenshot of {{ project.name }}">
                     <img class="project-icon" src="static/images/{{ project.id }}_icon_2x.png" srcset="static/images/{{ project.id }}_icon_1x.png 1x" alt="{{ project.name }} icon">
                     <div class="project-desc">
-                        <h3>{{ project.name }}</h3>
+                        <h4>{{ project.name }}</h4>
                         <p>{{ project.desc }}</p>
                     </div>
                     <div class="row justify-centered project-links">

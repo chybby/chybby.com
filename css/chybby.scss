@@ -11,8 +11,9 @@ $link-color: #1b95e0;
 $circular-image-border: 5px solid #ffffff;
 $circular-image-shadow-color: #b1b1b1;
 $circular-image-shadow: 0 0 10px #b1b1b1;
-$project-box-background-color: #ffffff;
+$box-background-color: #ffffff;
 $box-border-color: #c7c7c7;
+$sub-heading-background-color: #9dd4f1;
 $project-screenshot-border-color: #dbdee4;
 $project-button-font-color: #1b95e0;
 $project-button-background-color: #ececec;
@@ -149,9 +150,12 @@ body {
 }
 
 h3 {
-    text-align: center;
-    font-size: 1.8em;
-    margin: 60px 0 15px 0;
+    font-size: 1.3em;
+    margin: 60px 0 15px;
+    background: $sub-heading-background-color;
+    border-radius: 300px;
+    padding: 15px 35px 15px 35px;
+    width: fit-content;
 }
 
 br::before {
@@ -161,12 +165,15 @@ br::before {
 }
 
 .about-me {
+    align-items: center;
+
     div {
         border: 1px solid $box-border-color;
         border-radius: 5px;
-        background-color: $project-box-background-color;
-        padding: 20px;
+        background-color: $box-background-color;
+        padding: 15px;
         margin: 0 40px 0 40px;
+        font-size: 1.1em;
     }
 
     p {
@@ -180,6 +187,7 @@ br::before {
 
 .projects {
 
+    align-items: center;
     margin-top: 20px;
 
     .project-box {
@@ -189,7 +197,7 @@ br::before {
         position: relative;
         border: 1px solid $box-border-color;
         border-radius: 5px;
-        background-color: $project-box-background-color;
+        background-color: $box-background-color;
         overflow: hidden;
 
         .project-screenshot {
@@ -220,7 +228,7 @@ br::before {
             padding: 30px 20px 0 20px;
             transition: padding-top 1s, height 1s;
 
-            h3 {
+            h4 {
                 font-size: 2em;
                 font-weight: bold;
                 margin: 10px 0 10px 0;
