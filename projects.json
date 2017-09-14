@@ -1,5 +1,4 @@
-[
-    {
+[{
         "id": "tutorifull",
         "name": "Tutorifull",
         "desc": "Get an alert when a UNSW class has a free spot.",

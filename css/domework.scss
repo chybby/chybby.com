@@ -1,35 +1,42 @@
-/* box-sizing */
+// box-sizing
 
 * {
     box-sizing: border-box;
 }
 
-/* grid model classes */
+// grid model classes
 
 .row {
-    width: 100%;
     display: flex;
+    width: 100%;
 }
+
 .column {
-    min-height: 100%;
     display: flex;
     flex-direction: column;
+    min-height: 100%;
 }
+
 .justify-end {
     justify-content: flex-end;
 }
+
 .justify-centered {
     justify-content: center;
 }
+
 .justify-space-between {
     justify-content: space-between;
 }
+
 .justify-space-around {
     justify-content: space-around;
 }
+
 .wrap-wrap {
     flex-wrap: wrap;
 }
+
 .cross-centered {
     align-items: center;
 }
