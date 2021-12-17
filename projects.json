@@ -3,13 +3,13 @@
         "name": "Tutorifull",
         "desc": "Get an alert when a UNSW class has a free spot.",
         "url": "https://tutorifull.chybby.com",
-        "source": "https://gitlab.com/chybby/tutorifull"
+        "source": "https://github.com/chybby/tutorifull"
     },
     {
         "id": "portfolio",
         "name": "My Portfolio",
         "desc": "The website you're looking at :).",
         "url": "https://chybby.com",
-        "source": "https://gitlab.com/chybby/chybby.com"
+        "source": "https://github.com/chybby/chybby.com"
     }
 ]
