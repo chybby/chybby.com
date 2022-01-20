@@ -1,16 +1,13 @@
 '''Adam Chyb's personal website.'''
 
-from __future__ import absolute_import, print_function
-
 import json
 import os
 
-from flask import Flask, g, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory
 
 from flask_cachecontrol import (
     FlaskCacheControl,
     cache,
-    cache_for,
     dont_cache)
 
 from rev_assets import RevAssets
