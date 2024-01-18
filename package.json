@@ -1,20 +1,28 @@
 {
-    "name": "chybby.com",
-    "version": "1.0.0",
-    "description": "My personal website",
-    "devDependencies": {
-        "del": "^2.2.1",
-        "gulp-autoprefixer": "^3.1.0",
-        "gulp-concat": "^2.6.0",
-        "gulp-cssnano": "^2.1.2",
-        "gulp-notify": "^2.2.0",
-        "gulp-rename": "^1.2.2",
-        "gulp-rev": "^7.1.2",
-        "gulp-rev-delete-original": "^0.2.2",
-        "gulp-sass": "^2.3.2",
-        "gulp-uglify": "^1.5.4"
-    },
-    "dependencies": {
-        "gulp": "^3.9.1"
-    }
+  "name": "chybby.com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4"
+  }
 }
