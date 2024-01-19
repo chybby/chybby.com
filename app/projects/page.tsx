@@ -10,6 +10,11 @@ import personaldeliveryconglomerate from '@/app/images/personal-delivery-conglom
 import pickyplants from '@/app/images/picky-plants.png';
 import todoapp from '@/app/images/todoapp.png';
 import Image, { StaticImageData } from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Projects',
+};
 
 const project_categories = [
   {
