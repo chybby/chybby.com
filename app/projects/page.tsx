@@ -8,6 +8,7 @@ import morningcoffeehit from '@/app/images/morning-coffee-hit.png';
 import nobnobsharvestheist from '@/app/images/nobnobs-harvest-heist.png';
 import personaldeliveryconglomerate from '@/app/images/personal-delivery-conglomerate.png';
 import pickyplants from '@/app/images/picky-plants.png';
+import finalchants from '@/app/images/final-chants.png';
 import todoapp from '@/app/images/todoapp.png';
 import Image, { StaticImageData } from 'next/image';
 import { Metadata } from 'next';
@@ -97,6 +98,37 @@ const project_categories = [
   {
     heading: 'Games',
     projects: [
+      {
+        name: 'Final Chants',
+        description: (
+          <>
+            Summon spirits to help you solve challenges in this atmospheric
+            platformer. Built in 72 hours in a team of two for{' '}
+            <Link href="https://ldjam.com/events/ludum-dare/55/final-chants">
+              Ludum Dare 55: Summoning
+            </Link>
+            .
+          </>
+        ),
+        tags: ['Godot', 'Ludum Dare'],
+        links: [
+          <SocialLink
+            key="Github"
+            label="Github"
+            icon={<GitHub />}
+            href="https://github.com/chybby/ldjam55"
+            shadow={true}
+          />,
+          <SocialLink
+            key="Play"
+            label="Play"
+            icon={<VideogameAsset />}
+            href="https://chybby.itch.io/finalchants"
+            shadow={true}
+          />,
+        ],
+        image: { src: finalchants, alt: 'Final Chants cover image' },
+      },
       {
         name: 'Picky Plants',
         description: (
@@ -306,20 +338,20 @@ function Project({
   image?: { src: StaticImageData; alt: string };
 }) {
   return (
-    <div className="flex flex-col justify-between gap-3 rounded-xl bg-white p-4 shadow-sm dark:bg-transparent dark:ring-2 dark:ring-zinc-600">
+    <div className="flex w-full flex-col justify-between gap-3 rounded-xl bg-white p-4 shadow-sm dark:bg-transparent dark:ring-2 dark:ring-zinc-600 md:w-[49%]">
       <h3 className="text-4xl">{name}</h3>
       <p className="text-lg [&_a]:text-indigo-600 [&_a]:underline [&_a]:dark:text-indigo-400">
         {description}
       </p>
       {image !== undefined && (
         <Image
-          className="mx-auto max-w-80 rounded-xl"
+          className="mx-auto w-full max-w-96 rounded-xl"
           src={image.src}
           alt={image.alt}
         />
       )}
       <div className="flex flex-col gap-4">
-        <div className="flex gap-4 text-xl">
+        <div className="flex flex-wrap gap-4 text-xl">
           {links.map((link) => {
             return link;
           })}
@@ -339,7 +371,7 @@ export default function Projects() {
             <h2 className="pb-5 pt-20 text-center text-5xl text-indigo-800 dark:text-indigo-300">
               {heading}
             </h2>
-            <div className="flex flex-col gap-4 md:grid md:grid-cols-2">
+            <div className="flex flex-wrap justify-center gap-4 md:flex">
               {projects.map((project) => {
                 return (
                   <Project

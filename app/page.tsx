@@ -42,7 +42,7 @@ export default function Home() {
     <div className="flex flex-col md:flex-row-reverse md:items-start">
       <div className="flex flex-col items-center gap-16 py-16 md:basis-1/2">
         <Image
-          className="rotate-6 rounded-2xl border-8 border-white shadow-sm shadow-zinc-300 dark:border-zinc-300 dark:shadow-black"
+          className="size-80 rotate-6 rounded-2xl border-8 border-white shadow-sm shadow-zinc-300 dark:border-zinc-300 dark:shadow-black"
           src={profile}
           priority={true}
           alt="A picture of me"
@@ -88,13 +88,15 @@ export default function Home() {
             things.
           </p>
           <p>
-            I&apos;ve spent 5 years working at Google, 4 of which working as an
-            SRE on{' '}
+            I spent 5 years working at Google, 4 of which working as an SRE on{' '}
             <Link href="https://cloud.google.com/storage">
               Google Cloud Storage
             </Link>{' '}
             before becoming a software engineer working on{' '}
-            <Link href="https://fuchsia.dev/">Fuchsia OS</Link>.
+            <Link href="https://fuchsia.dev/">Fuchsia OS</Link>. I&apos;m
+            currently a senior software engineer at{' '}
+            <Link href="https://anduril.com">Anduril</Link>, working on
+            autonomous defense systems.
           </p>
           <p>
             I&apos;m most experienced and interested in software development
