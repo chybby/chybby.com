@@ -81,7 +81,7 @@ export default function Home() {
           })}
         </div>
 
-        <div className="flex flex-col gap-4 text-lg [&_a]:text-indigo-600 [&_a]:underline [&_a]:dark:text-indigo-400">
+        <div className="flex flex-col gap-4 text-justify text-lg [&_a]:text-indigo-600 [&_a]:underline [&_a]:dark:text-indigo-400">
           <p>
             Madam, I&apos;m Adam. I&apos;m a computer science graduate from UNSW
             with an interest in using computers for making things and breaking

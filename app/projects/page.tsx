@@ -338,7 +338,7 @@ function Project({
   image?: { src: StaticImageData; alt: string };
 }) {
   return (
-    <div className="flex w-full flex-col justify-between gap-3 rounded-xl bg-white p-4 shadow-sm dark:bg-transparent dark:ring-2 dark:ring-zinc-600 md:w-[49%]">
+    <div className="flex w-full flex-col justify-between gap-3 rounded-xl bg-white p-4 shadow-sm dark:bg-transparent dark:ring-2 dark:ring-zinc-600 md:w-[48%]">
       <h3 className="text-4xl">{name}</h3>
       <p className="text-lg [&_a]:text-indigo-600 [&_a]:underline [&_a]:dark:text-indigo-400">
         {description}
